@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="resources/images/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="resources/FontAwesome/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>TechBros</title>
+</head>
+
+<body>
+    <div class="cursor-dot-outline"></div>
+    <div class="cursor-dot"></div>
+    <div class="content">
+        <div class="navbar">
+            <div class="links">
+                <a>Home</a>
+                <a>About</a>
+                <div class="logo">
+                    <img src="resources/images/logo.png" alt="">
+                </div>
+                <a>Portfolio</a>
+                <a>Contact us</a>
+            </div>
+        </div>
+        <div class="hero" id="home">
+            <div class="hero-overlay">
+                <div class="hero-text">
+                    <p>Good <span id="mood">day</span>, welcome to</p>
+                    <h1>Tech<span id="bros">Bros</span></h1>
+                    <h2>A Startup <span id="glitch">Software Engineering Group</span></h2>
+                </div>
+            </div>
+        </div>
+        <div class="about" id="about">
+            <div class="about-overlay page">
+                <div class="head animate">
+                    <h1>About</h1>
+                </div>
+                <div class="about-text animate">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde dolores voluptatibus nulla
+                        adipisci consequatur! Animi, sint quis porro vel aperiam deleniti sit quaerat reiciendis tempore
+                        nemo sunt repellendus facere quibusdam nesciunt explicabo quia excepturi recusandae voluptatum
+                        ipsam expedita itaque odit.</p>
+                    <br>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde dolores voluptatibus nulla
+                        adipisci consequatur! Animi, sint quis porro vel aperiam deleniti sit quaerat reiciendis tempore
+                        nemo sunt repellendus facere quibusdam nesciunt explicabo quia excepturi recusandae voluptatum
+                        ipsam expedita itaque odit.</p>
+                </div>
+                <div class="services-cont animate">
+                    <div class="services-box">
+                        <div class="service">
+                            <i class="fa-brands fa-youtube service-icon"></i>
+                            <div class="service-text">
+                                <p>Lorem ipsum dolor sit alon amet.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="services-box">
+                        <div class="service">
+                            <i class="fa-solid fa-file service-icon"></i>
+                            <div class="service-text">
+                                <p>Lorem ipsum dolor sit amet, consectetur elit.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="services-box">
+                        <div class="service">
+                            <i class="fa-solid fa-user service-icon"></i>
+                            <div class="service-text">
+                                <p>Lorem ipsum adipisicing elit.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="portfolio page" id="portfolio">
+            <div class="head animate">
+                <h1>Projects</h1>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/glitched-writer/lib/index.min.js"></script>
+<script type="module">
+    import GlitchedWriter, {
+        wait
+    } from "https://cdn.skypack.dev/glitched-writer@2.0.29";
+
+    let glitch = document.getElementById("glitch")
+
+    // Calling GlitchedWriter constructor:
+    const writer = new GlitchedWriter(glitch, { html: true })
+
+    const phrases = ['web development group', 'graphics design group', 'undergraduate team']
+
+    writer.queueWrite(phrases, 2000, true)
+</script>
+<script src="script.js"></script>
+
+</html>
