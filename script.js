@@ -47,7 +47,7 @@ $(window).ready(function () {
     });
 });
 
-$(document).ready(function () {
+$(window).ready(function () {
     for (let i = 0; i < progressValues.length; i++) {
         let currentProgress = $(".progress-bar")[i]
         $(currentProgress).css('width', `${progressValues[i]}%`)
