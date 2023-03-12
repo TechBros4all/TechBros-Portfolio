@@ -46,7 +46,7 @@ $(window).ready(function () {
         delay: 0
     });
 });
-
+//animate progress bars
 $(window).ready(function () {
     for (let i = 0; i < progressValues.length; i++) {
         let currentProgress = $(".progress-bar")[i]
