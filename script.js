@@ -1,7 +1,7 @@
 //Navbar Active
 var navBar = document.querySelector(".navbar");
 var links = document.querySelectorAll(".links a");
-
+var progressValues = [100, 90, 70, 50, 30];
 for (let i = 0; i < links.length; i++) {
     links[i].addEventListener("click", () => {
         let name = links[i].innerHTML.toLowerCase();
@@ -47,6 +47,13 @@ $(window).ready(function () {
     });
 });
 
+$(document).ready(function () {
+    for (let i = 0; i < progressValues.length; i++) {
+        let currentProgress = $(".progress-bar")[i]
+        $(currentProgress).css('width', `${progressValues[i]}%`)
+    }
+
+});
 
 //Cursor follow mouse
 
