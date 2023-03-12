@@ -28,41 +28,25 @@ function servicesBoxSpacing(margin = 0) {
     let spacing = 0;
     let delay = 0;
     for (let i = 0; i < servicesBox.length; i++) {
-        service[i].style.transitionDelay = `${delay}s`
+        // service[i].style.transitionDelay = `${delay}s`
         servicesBox[i].style.left = `${spacing}px`;
         spacing += (width + margin);
         delay += 0.4;
     }
 }
 
+
 //Scroll Animations
-window.addEventListener("scroll", () => {
-    navbarActive();
-    scrollAnimations()
-})
+$(window).ready(function () {
+    AOS.init({
+        duration: 500,
+        easing: "ease-in-out",
+        once: true,
+        mirror: false,
+        delay: 0
+    });
+});
 
-
-function navbarActive() {
-    if (window.scrollY > 100) {
-        if (navBar.classList.contains("active")) return;
-        navBar.classList.add("active")
-    } else {
-        navBar.classList.remove("active")
-    }
-}
-
-function scrollAnimations() {
-    let viewport = window.innerHeight / 1.3;
-    let animate = document.querySelectorAll(".animate");
-    for (let i = 0; i < animate.length; i++) {
-        if (animate[i].getBoundingClientRect().top < viewport) {
-            if (animate[i].classList.contains("active")) continue;
-            animate[i].classList.add("active")
-        } else {
-            if (animate[i].classList.contains("active")) animate[i].classList.remove("active");
-        }
-    }
-}
 
 //Cursor follow mouse
 
@@ -176,4 +160,4 @@ var cursor = {
     }
 }
 
-cursor.init();
+// cursor.init();
