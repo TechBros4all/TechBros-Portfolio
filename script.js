@@ -47,12 +47,37 @@ $(window).ready(function () {
     });
 });
 //animate progress bars
-$(window).ready(function () {
+const progress = () => {
     for (let i = 0; i < progressValues.length; i++) {
-        let currentProgress = $(".progress-bar")[i]
-        $(currentProgress).css('width', `${progressValues[i]}%`)
+        let currentProgress = $(".progress-bar")[i];
+        $(currentProgress).css('width', `${progressValues[i]}%`);
     }
+}
+$(document).ready(function () {
+    $(window).scroll(function () {
+        if ($(document).scrollTop() > 10) {
+            $(".navbar").addClass("scrolled");
+        } else {
+            $(".navbar").removeClass("scrolled");
+        }
+        // Get current scroll position
+        var scrollPosition = $(window).scrollTop();
 
+        // Loop through all sections to find the one in view
+        $('section').each(function () {
+            var sectionTop = $(this).offset().top - 300;
+            var sectionBottom = sectionTop + $(this).outerHeight();
+            if (scrollPosition >= sectionTop && scrollPosition < sectionBottom) {
+                // Update navbar link for current active section
+                $('.nav-link').removeClass('active');
+                $('.nav-link[href="#' + $(this).attr('id') + '"]').addClass('active');
+                //animate progress-bars
+                if ($(this).attr("class").includes("progress-bar-container")) {
+                    progress();
+                }
+            }
+        });
+    });
 });
 
 //Cursor follow mouse
