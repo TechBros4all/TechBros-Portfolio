@@ -14,11 +14,13 @@
     <link rel="shortcut icon" href="resources/images/favicon.png" type="image/x-icon">
     <link rel="stylesheet" href="resources/FontAwesome/css/all.min.css">
     <script src="https://kit.fontawesome.com/79094805a6.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@srexi/purecounterjs/dist/purecounter_vanilla.js"></script>
     <link rel="stylesheet" href="style.css">
     <title>TechBros</title>
 </head>
 
 <body>
+    <img src="resources/images/trevor-bobyk-vd_TGp0QiLU-unsplash.jpg" id="back-background" alt="francis">
     <div class="cursor-dot-outline"></div>
     <div class="cursor-dot"></div>
     <nav class="navbar navbar-expand-md fixed-top ">
@@ -81,7 +83,7 @@
                         <img src="resources/images/pexels-canva-studio-3194519.jpg" alt="">
                     </div>
                 </div>
-                <section class="progress-bar-container">
+                <section class="progress-bar-container" data-aos="zoom-out-right">
                     <div class="progress">
                         <div class="progress-bar">
                             <span class="left">HTML</span><span class="right">100%</span>
@@ -126,51 +128,84 @@
                             services to help our clients
                             optimize their IT infrastructure and implement the best practices for their business.
                             <br>
-                            Our
-                            team of experienced
-                            programmers is proficient in various programming languages, including:
                         </p>
                     </div>
-                    <div class="about-img second-about col-md-5 col-sm-12" data-aos="flip-right">
-                        <img src="resources/images/pexels-canva-studio-3194519.jpg" alt="">
+                    <div class="about-img second-about col-md-5 col-sm-12" data-aos="zoom-in-right">
+                        <img src="resources/images/pexels-pixabay-355948.jpg" alt="">
                     </div>
                 </div>
 
             </div>
+
         </section>
-        <section class="services-cont" data-aos="flip-down" id="services">
-            <div class="services-box">
-                <div class="service">
-                    <i class="fa-brands fa-youtube service-icon"></i>
-                    <div class="service-text">
-                        <p>Lorem ipsum dolor sit alon amet.</p>
+        <section class="services cotainer-fluid" id="services">
+            <div class="service-head">
+
+                <h1>
+                    <hr class="dash">Check Out Our Services
+                    <hr class="dash">
+                </h1>
+
+            </div>
+            <div class="services-cont" data-aos="flip-down">
+                <div class="services-box">
+                    <div class="service">
+                        <i class="fa-solid fa-award service-icon"></i>
+                        <div class="service-text">
+                            <p>High Quality Solutions</p>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="services-box">
-                <div class="service">
-                    <i class="fa-solid fa-file service-icon"></i>
-                    <div class="service-text">
-                        <p>Lorem ipsum dolor sit amet, consectetur elit.</p>
+                <div class="services-box">
+                    <div class="service">
+                        <i class="fa-solid fa-face-smile-beam service-icon"></i>
+                        <div class="service-text">
+                            <p>Amazing Client Relationship</p>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="services-box">
-                <div class="service">
-                    <i class="fa-solid fa-user service-icon"></i>
-                    <div class="service-text">
-                        <p>Lorem ipsum adipisicing elit.</p>
+                <div class="services-box">
+                    <div class="service">
+                        <i class="fa-solid fa-headset service-icon"></i>
+                        <div class="service-text">
+                            <p>Post-Development Support</p>
+                        </div>
                     </div>
                 </div>
-            </div>
         </section>
-        <section class="portfolio" id="portfolio">
-            <div class="head" data-aos="flip-left">
-                <h1>Projects</h1>
+        <div class="row counters" data-aos="zoom-in-up">
+
+            <div class="col-lg-3 col-6 text-center">
+                <span data-purecounter-start="0" data-purecounter-end="2" data-purecounter-duration="2"
+                    class="purecounter"></span>
+                <p>Clients</p>
             </div>
-        </section>
+
+            <div class="col-lg-3 col-6 text-center">
+                <span data-purecounter-start="0" data-purecounter-end="6" data-purecounter-duration="1.5"
+                    class="purecounter"></span>
+                <p>Projects</p>
+            </div>
+
+            <div class="col-lg-3 col-6 text-center">
+                <span data-purecounter-start="0" data-purecounter-end="13" data-purecounter-duration="1.5"
+                    class="purecounter"></span>
+                <p>Hours Of Support</p>
+            </div>
+
+            <div class="col-lg-3 col-6 text-center">
+                <span data-purecounter-start="0" data-purecounter-end="6" data-purecounter-duration="1.5"
+                    class="purecounter"></span>
+                <p>Hard Workers</p>
+            </div>
+        </div>
     </div>
-
+    <section class="portfolio" id="portfolio">
+        <div class="head" data-aos="flip-left">
+            <h1>Projects</h1>
+        </div>
+    </section>
+    </div>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
         integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
         crossorigin="anonymous"></script>
@@ -180,6 +215,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
         integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
         crossorigin="anonymous"></script>
+    <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
 </body>
 <script src="https://cdn.jsdelivr.net/npm/glitched-writer/lib/index.min.js"></script>
 <script type="module">

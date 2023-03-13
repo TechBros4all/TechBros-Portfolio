@@ -80,6 +80,7 @@ $(document).ready(function () {
     });
 });
 
+;
 //Cursor follow mouse
 
 var cursor = {
@@ -192,4 +193,5 @@ var cursor = {
     }
 }
 
+new PureCounter();
 // cursor.init();
