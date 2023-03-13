@@ -84,12 +84,21 @@ body {
     transition: 0.5s;
 }
 .scrolled {
-    background-color:rgba(241, 237, 229, 0.3);
+    background-color:rgba(168, 142, 106,0.6);
     backdrop-filter: blur(8px);
     box-shadow: 2px 2px 10px;
 }
+
+.scrolled a:not(.active){
+    color:#212121;
+}
+
+.scrolled a.active{
+    color: white;
+    font-weight: bold;
+}
 .active{
-    color: var(--gold);
+    color:#a88e6a;
 }
 .nav-link::before {
     content: "";
@@ -127,6 +136,7 @@ body {
     padding: 0;
     align-items: center;
     transition: all 0.4s;
+    /* background-color: transparent; */
 }
 
 
@@ -155,6 +165,8 @@ body {
     background: url(resources/images/hero.jpg) left center no-repeat;
     background-size: cover;
     background-color: var(--dark);
+    padding-bottom: 100px;
+    /* margin-bottom: 50px; */
 }
 
 .hero-overlay {
@@ -199,7 +211,7 @@ body {
 }
 .hero-img img{
     width: 400px;
-    height: 450px;
+    height: 400px;
 }
 
 
@@ -264,8 +276,8 @@ body {
 .about {
     width: 100%;
     height: auto;
-    background: url(resources/images/about.jpg) center center no-repeat;
-    background-size: cover;
+    background-color: var(--offwhite);
+    color: #212121;
 }
 
 .about h1{
@@ -277,7 +289,7 @@ body {
     padding-bottom: 20px;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.6);
+    background-color:transparent
 }
 
 .about-container{
@@ -325,8 +337,9 @@ body {
     position: relative;
     /* left: 10%; */
     width: 100%;
-    height: 50px;
+    height: 30px;
     font-size: 1.2rem;
+    background-color: rgba(19, 19, 116, 0.39);
 }
 .progress-bar-container{
     width: 80%;
@@ -458,15 +471,6 @@ body {
         border-bottom: 2px solid var(--dark);
     }
     
-    .navbar-toggler{
-        /* background-color: black; */
-        /* color: #6c5c49; */
-    }
-    .navbar-toggler-icon{
-        /* background-color: #f1ede5; */
-        /* color: #6c5c49; */
-    }
-
     .hero-text {
         position: static;
     }
