@@ -23,7 +23,7 @@
     <img src="resources/images/trevor-bobyk-vd_TGp0QiLU-unsplash.jpg" id="back-background" alt="francis">
     <div class="cursor-dot-outline"></div>
     <div class="cursor-dot"></div>
-    <nav class="navbar navbar-expand-md fixed-top ">
+    <nav class="navbar navbar-expand-md fixed-top navbar-dark">
         <a class="logo navbar-brand" href="#"><img src="resources/images/logo.png" alt=""></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsible">
             <span class="navbar-toggler-icon"></span>
@@ -141,7 +141,7 @@
         <section class="services cotainer-fluid" id="services">
             <div class="service-head">
 
-                <h1>
+                <h1 data-aos="fade-up">
                     <hr class="dash">Check Out Our Services
                     <hr class="dash">
                 </h1>
@@ -169,6 +169,23 @@
                         <i class="fa-solid fa-headset service-icon"></i>
                         <div class="service-text">
                             <p>Post-Development Support</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="services-box">
+                    <div class="service">
+                        <i class="fa-solid fa-list-check service-icon"></i>
+                        <div class="service-text">
+                            <p>Product Management</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="services-box">
+                    <div class="service">
+                        <i class="fa-solid fa-file-pen service-icon
+                        "></i>
+                        <div class="service-text">
+                            <p>Graphic Design</p>
                         </div>
                     </div>
                 </div>
@@ -207,38 +224,97 @@
     </section>
 
     <section class="contact" id=contact>
-        <div class="contact-container row"></div>
-        <div class="details-container col-md-3 col-sm-12">
-            <div class="details">
-                <ul class="fa-ul">
-                    <li><span class="fa-li"><i class="fa-solid fa-location-dot"></i></span>
-                        <h2>Location</h2>
-                        <p>Ibadan, Nigeria</p>
-                    </li>
-                </ul>
-            </div>
+        <div class="contact-head" data-aos="zoom-in-up">
+            <h1>Contact Us</h1>
+            <hr>
+        </div>
+        <div class="contact-container row" data-aos="fade-up">
+            <div class="details-container col-md-4 col-sm-12">
+                <div class="details">
+                    <ul class="fa-ul">
+                        <li><span class="fa-li"><i class="fa-solid fa-location-dot"></i></span>
+                            <h2>Location</h2>
+                            <p>Ibadan, Nigeria</p>
+                        </li>
+                    </ul>
+                </div>
 
-            <div class="details">
-                <ul class="fa-ul">
-                    <li><span class="fa-li"><i class="fa-solid fa-envelope"></i></span>
-                        <h2>Email</h2>
-                        <p>techbros@gmail.com</p>
-                    </li>
-                </ul>
-            </div>
+                <div class="details">
+                    <ul class="fa-ul">
+                        <li><span class="fa-li"><i class="fa-solid fa-envelope"></i></span>
+                            <h2>Email</h2>
+                            <p>techbros@gmail.com</p>
+                        </li>
+                    </ul>
+                </div>
 
-            <div class="details">
-                <ul class="fa-ul">
-                    <li><span class="fa-li"><i class="fa-solid fa-phone-volume"></i></span>
-                        <h2>Phone</h2>
-                        <p>+2349052513365</p>
-                    </li>
-                </ul>
+                <div class="details">
+                    <ul class="fa-ul">
+                        <li><span class="fa-li"><i class="fa-solid fa-phone-volume"></i></span>
+                            <h2>Phone</h2>
+                            <p>+2349052513365</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <form class="contact-input col-md-8 col-sm-12">
+                <div class="inputs row float-left flex">
+                    <input type="text" placeholder="Name" class="col-md-5 col-sm-12">
+
+                    <input type="email" placeholder="Email" class="col-md-5 col-sm-12">
+                    <input type="text" placeholder="Subject" class="col-sm-12">
+                    <textarea id="" cols="30" rows="6" class="col-sm-12" placeholder="Message"></textarea>
+                </div>
+                <button class="message">Send Message</button>
+            </form>
+        </div>
+    </section>
+    <section class="footer">
+        <div class="footer-content" data-aos="flip-up">
+            <div class="footer-logo">
+                <img src="resources/images/logo.png" alt="logo">
+
+                <div class="socials">
+                    <a href=""><i class="fa-brands fa-facebook"></i></a>
+                    <a href=""><i class="fa-brands fa-twitter"></i></a>
+                    <a href=""><i class="fa-brands fa-instagram"></i></a>
+                    <a href=""><i class="fa-solid fa-envelope"></i></a>
+                </div>
+            </div>
+            <div class="container-fluid">
+                <div class="footer-list">
+                    <ul>
+                        <h3>Useful Links</h3>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="">Privacy Policy</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-list">
+                    <ul>
+                        <h3>Our Services</h3>
+                        <li><a href="">Web Design</a></li>
+                        <li><a href="">Web Development</a></li>
+                        <li><a href="">Product Management</a></li>
+                        <li><a href="">Graphic Design</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-list">
+                    <ul>
+                        <h3>Contact Us</h3>
+                        <li>Ibadan Nigeria</li>
+                        <li><span class="contact-category">Phone:</span> +2349052513365</li>
+                        <li><span class="contact-category">Email:</span> techbros@gmail.com</li>
+                    </ul>
+                </div>
             </div>
         </div>
-        <div class="contact-input col-md-3 col-sm-12">
 
-        </div>
+        <p class="copyright">&copy; Copyright <b>TechBros</b></p>
+
     </section>
     </div>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"

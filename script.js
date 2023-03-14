@@ -194,4 +194,4 @@ var cursor = {
 }
 
 new PureCounter();
-cursor.init();
+// cursor.init();
