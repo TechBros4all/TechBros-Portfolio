@@ -633,7 +633,7 @@ color: var(--offwhite);
 .footer-logo img{
     width:150px;
     height: 100px;
-    margin-left: 30%;
+    /* margin-left: 20%; */
 }
 ::-webkit-scrollbar {
     width: 15px;
