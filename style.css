@@ -17,7 +17,7 @@
 
 html {
     scroll-behavior: smooth;
-    /* cursor: none; */
+    cursor: none;
 }
 
 :root {
@@ -28,7 +28,7 @@ html {
 
 body {
     overflow-x: hidden;
-    /* cursor: none; */
+    cursor: none;
     position: relative;
     background-color: var(--dark);
     -webkit-user-select: none;
@@ -565,7 +565,7 @@ display: flex;
 
 .message:hover{
     background-color: #a38d72;
-    color: #21212100;
+    color: black;
 }
 
 .footer{
@@ -591,9 +591,7 @@ display: flex;
     flex-wrap: wrap;
     gap: 40px;
 }
-.footer-list{
-    /* width: 20%; */
-}
+
 .footer-list ul{
     list-style: none;
 }
@@ -606,6 +604,8 @@ display: flex;
 }
 .socials{
     width: 100%;
+    display: flex;
+    justify-content: space-evenly;
 }
 .socials a{
     color: var(--gold);
@@ -618,6 +618,7 @@ display: flex;
 
 .socials a:hover{
 border:2px solid white;
+color: var(--offwhite);
 }
 .copyright{
     text-align: center;
@@ -630,8 +631,9 @@ border:2px solid white;
     width: 30%;
 }
 .footer-logo img{
-    width:100px;
+    width:150px;
     height: 100px;
+    margin-left: 30%;
 }
 ::-webkit-scrollbar {
     width: 15px;
