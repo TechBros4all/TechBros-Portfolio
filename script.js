@@ -1,7 +1,7 @@
 //Navbar Active
 var navBar = document.querySelector(".navbar");
 var links = document.querySelectorAll(".links a");
-
+var progressValues = [100, 90, 70, 50, 30];
 for (let i = 0; i < links.length; i++) {
     links[i].addEventListener("click", () => {
         let name = links[i].innerHTML.toLowerCase();
@@ -28,42 +28,59 @@ function servicesBoxSpacing(margin = 0) {
     let spacing = 0;
     let delay = 0;
     for (let i = 0; i < servicesBox.length; i++) {
-        service[i].style.transitionDelay = `${delay}s`
+        // service[i].style.transitionDelay = `${delay}s`
         servicesBox[i].style.left = `${spacing}px`;
         spacing += (width + margin);
         delay += 0.4;
     }
 }
 
+
 //Scroll Animations
-window.addEventListener("scroll", () => {
-    navbarActive();
-    scrollAnimations()
-})
-
-
-function navbarActive() {
-    if (window.scrollY > 100) {
-        if (navBar.classList.contains("active")) return;
-        navBar.classList.add("active")
-    } else {
-        navBar.classList.remove("active")
+$(window).ready(function () {
+    AOS.init({
+        duration: 500,
+        easing: "ease-in-out",
+        once: true,
+        mirror: false,
+        delay: 0
+    });
+});
+//animate progress bars
+const progress = () => {
+    for (let i = 0; i < progressValues.length; i++) {
+        let currentProgress = $(".progress-bar")[i];
+        $(currentProgress).css('width', `${progressValues[i]}%`);
     }
 }
-
-function scrollAnimations() {
-    let viewport = window.innerHeight / 1.3;
-    let animate = document.querySelectorAll(".animate");
-    for (let i = 0; i < animate.length; i++) {
-        if (animate[i].getBoundingClientRect().top < viewport) {
-            if (animate[i].classList.contains("active")) continue;
-            animate[i].classList.add("active")
+$(document).ready(function () {
+    $(window).scroll(function () {
+        if ($(document).scrollTop() > 10) {
+            $(".navbar").addClass("scrolled");
         } else {
-            if (animate[i].classList.contains("active")) animate[i].classList.remove("active");
+            $(".navbar").removeClass("scrolled");
         }
-    }
-}
+        // Get current scroll position
+        var scrollPosition = $(window).scrollTop();
 
+        // Loop through all sections to find the one in view
+        $('section').each(function () {
+            var sectionTop = $(this).offset().top - 300;
+            var sectionBottom = sectionTop + $(this).outerHeight();
+            if (scrollPosition >= sectionTop && scrollPosition < sectionBottom) {
+                // Update navbar link for current active section
+                $('.nav-link').removeClass('active');
+                $('.nav-link[href="#' + $(this).attr('id') + '"]').addClass('active');
+                //animate progress-bars
+                if ($(this).attr("class").includes("progress-bar-container")) {
+                    progress();
+                }
+            }
+        });
+    });
+});
+
+;
 //Cursor follow mouse
 
 var cursor = {
@@ -176,4 +193,5 @@ var cursor = {
     }
 }
 
+new PureCounter();
 cursor.init();

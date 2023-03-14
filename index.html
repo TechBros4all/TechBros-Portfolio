@@ -5,86 +5,328 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
     <link rel="shortcut icon" href="resources/images/favicon.png" type="image/x-icon">
     <link rel="stylesheet" href="resources/FontAwesome/css/all.min.css">
+    <script src="https://kit.fontawesome.com/79094805a6.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@srexi/purecounterjs/dist/purecounter_vanilla.js"></script>
     <link rel="stylesheet" href="style.css">
     <title>TechBros</title>
 </head>
 
 <body>
+    <img src="resources/images/trevor-bobyk-vd_TGp0QiLU-unsplash.jpg" id="back-background" alt="francis">
     <div class="cursor-dot-outline"></div>
     <div class="cursor-dot"></div>
-    <div class="content">
-        <div class="navbar">
-            <div class="links">
-                <a>Home</a>
-                <a>About</a>
-                <div class="logo">
-                    <img src="resources/images/logo.png" alt="">
-                </div>
-                <a>Portfolio</a>
-                <a>Contact us</a>
-            </div>
+    <nav class="navbar navbar-expand-md fixed-top navbar-dark" data-aos="flip-down">
+        <a class="logo navbar-brand" href="#"><img src="resources/images/logo.png" alt=""></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsible">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="links collapse navbar-collapse" id="collapsible">
+            <ul class="navbar-nav">
+                <li class="nav-item"><a href="#home" class="nav-link active">Home</a>
+                </li>
+                <li class="nav-item"><a href="#about" class="nav-link">About</a>
+                </li>
+                <li class="nav-item"><a href="#services" class="nav-link">Services</a>
+                </li>
+                <li class="nav-item"><a href="#portfolio" class="nav-link">Portfolio</a>
+                </li>
+                <li class="nav-item"><a href="#contact" class="nav-link">Contact Us</a>
+                </li>
+            </ul>
         </div>
-        <div class="hero" id="home">
-            <div class="hero-overlay">
-                <div class="hero-text">
+    </nav>
+
+    <div class="content">
+
+        <section class="hero" id="home">
+            <div class="hero-overlay row">
+                <div class="hero-text col-md-6 col-sm-12">
                     <p>Good <span id="mood">day</span>, welcome to</p>
                     <h1>Tech<span id="bros">Bros</span></h1>
                     <h2>A Startup <span id="glitch">Software Engineering Group</span></h2>
                 </div>
+                <div class="col-md-6 col-sm-12 hero-img">
+                    <img src="resources/images/0_-_Tech_team_working_on_project_with_predominantl-removebg-preview (1).png"
+                        alt="">
+                </div>
             </div>
-        </div>
-        <div class="about" id="about">
+        </section>
+        <section class="about" id="about">
             <div class="about-overlay page">
-                <div class="head animate">
-                    <h1>About</h1>
-                </div>
-                <div class="about-text animate">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde dolores voluptatibus nulla
-                        adipisci consequatur! Animi, sint quis porro vel aperiam deleniti sit quaerat reiciendis tempore
-                        nemo sunt repellendus facere quibusdam nesciunt explicabo quia excepturi recusandae voluptatum
-                        ipsam expedita itaque odit.</p>
-                    <br>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde dolores voluptatibus nulla
-                        adipisci consequatur! Animi, sint quis porro vel aperiam deleniti sit quaerat reiciendis tempore
-                        nemo sunt repellendus facere quibusdam nesciunt explicabo quia excepturi recusandae voluptatum
-                        ipsam expedita itaque odit.</p>
-                </div>
-                <div class="services-cont animate">
-                    <div class="services-box">
-                        <div class="service">
-                            <i class="fa-brands fa-youtube service-icon"></i>
-                            <div class="service-text">
-                                <p>Lorem ipsum dolor sit alon amet.</p>
-                            </div>
-                        </div>
+                <div class="about-container container-fluid row">
+                    <div class="about-text col-md-6 col-sm-12" data-aos="flip-right">
+                        <p>Our startup programming company specializes in developing customized software solutions
+                            for
+                            businesses of all sizes. We
+                            work closely with our clients to understand their unique needs and develop solutions
+                            that
+                            streamline their processes, boost productivity, and enhance customer experiences:
+                        <ul class="fa-ul">
+                            <li "><span class=" fa-li"><i class="fa-solid fa-angles-right"></i></span> Software
+                                applications</li>
+                            <li><span class="fa-li"><i class="fa-solid fa-angles-right"></i></span>Websites</li>
+                            <li><span class="fa-li"><i class="fa-solid fa-angles-right"></i></span>Mobile apps
+                            </li>
+
+                        </ul>
+                        </p>
                     </div>
-                    <div class="services-box">
-                        <div class="service">
-                            <i class="fa-solid fa-file service-icon"></i>
-                            <div class="service-text">
-                                <p>Lorem ipsum dolor sit amet, consectetur elit.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="services-box">
-                        <div class="service">
-                            <i class="fa-solid fa-user service-icon"></i>
-                            <div class="service-text">
-                                <p>Lorem ipsum adipisicing elit.</p>
-                            </div>
-                        </div>
+                    <div class="about-img col-md-5 col-sm-12" data-aos="zoom-in-left">
+                        <img src="resources/images/pexels-canva-studio-3194519.jpg" alt="">
                     </div>
                 </div>
+                <section class="progress-bar-container" data-aos="zoom-out-right">
+                    <div class="progress">
+                        <div class="progress-bar">
+                            <span class="left">HTML</span><span class="right">100%</span>
+                        </div>
+                    </div><br>
+
+                    <div class="progress">
+                        <div class="progress-bar">
+                            <span class="left">CSS</span><span class="right">90%</span>
+                        </div>
+                    </div><br>
+
+                    <div class="progress">
+                        <div class="progress-bar"><span class="left">Javascript</span><span class="right">70%</span>
+                        </div>
+                    </div><br>
+
+                    <div class="progress">
+                        <div class="progress-bar"><span class="left">Python</span><span class="right">50%</span>
+                        </div>
+                    </div><br>
+
+                    <div class="progress">
+                        <div class="progress-bar"><span class="left">Node JS</span><span class="right">30%</span>
+                        </div>
+                    </div>
+                </section>
+
+                <div class="about-container container-fluid row">
+
+                    <div class="about-text second col-md-6 col-sm-12" data-aos="flip-left">
+                        <p>
+                            Our
+                            mission is to help our clients
+                            succeed by providing top-notch software solutions that exceed their expectations.
+                            Contact us
+                            today to learn more about
+                            how we can help your business grow.
+                            We stay up-to-date with
+                            the latest technologies to provide innovative solutions. In addition, we offer
+                            consultation
+                            services to help our clients
+                            optimize their IT infrastructure and implement the best practices for their business.
+                            <br>
+                        </p>
+                    </div>
+                    <div class="about-img second-about col-md-5 col-sm-12" data-aos="zoom-in-right">
+                        <img src="resources/images/pexels-pixabay-355948.jpg" alt="">
+                    </div>
+                </div>
+
             </div>
-        </div>
-        <div class="portfolio page" id="portfolio">
-            <div class="head animate">
-                <h1>Projects</h1>
+
+        </section>
+        <section class="services cotainer-fluid" id="services">
+            <div class="service-head">
+
+                <h1 data-aos="fade-up">
+                    <hr class="dash">Check Out Our Services
+                    <hr class="dash">
+                </h1>
+
+            </div>
+            <div class="services-cont" data-aos="flip-down">
+                <div class="services-box">
+                    <div class="service">
+                        <i class="fa-solid fa-award service-icon"></i>
+                        <div class="service-text">
+                            <p>High Quality Solutions</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="services-box">
+                    <div class="service">
+                        <i class="fa-solid fa-face-smile-beam service-icon"></i>
+                        <div class="service-text">
+                            <p>Amazing Client Relationship</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="services-box">
+                    <div class="service">
+                        <i class="fa-solid fa-headset service-icon"></i>
+                        <div class="service-text">
+                            <p>Post-Development Support</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="services-box">
+                    <div class="service">
+                        <i class="fa-solid fa-list-check service-icon"></i>
+                        <div class="service-text">
+                            <p>Product Management</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="services-box">
+                    <div class="service">
+                        <i class="fa-solid fa-file-pen service-icon
+                        "></i>
+                        <div class="service-text">
+                            <p>Graphic Design</p>
+                        </div>
+                    </div>
+                </div>
+        </section>
+        <div class="row counters" data-aos="zoom-in-up">
+
+            <div class="col-lg-3 col-6 text-center">
+                <span data-purecounter-start="0" data-purecounter-end="2" data-purecounter-duration="2"
+                    class="purecounter"></span>
+                <p>Clients</p>
+            </div>
+
+            <div class="col-lg-3 col-6 text-center">
+                <span data-purecounter-start="0" data-purecounter-end="6" data-purecounter-duration="1.5"
+                    class="purecounter"></span>
+                <p>Projects</p>
+            </div>
+
+            <div class="col-lg-3 col-6 text-center">
+                <span data-purecounter-start="0" data-purecounter-end="13" data-purecounter-duration="1.5"
+                    class="purecounter"></span>
+                <p>Hours Of Support</p>
+            </div>
+
+            <div class="col-lg-3 col-6 text-center">
+                <span data-purecounter-start="0" data-purecounter-end="6" data-purecounter-duration="1.5"
+                    class="purecounter"></span>
+                <p>Hard Workers</p>
             </div>
         </div>
     </div>
+    <section class="portfolio" id="portfolio">
+        <div class="head" data-aos="flip-left">
+            <h1>Projects</h1>
+        </div>
+    </section>
+
+    <section class="contact" id=contact>
+        <div class="contact-head" data-aos="zoom-in-up">
+            <h1>Contact Us</h1>
+            <hr>
+        </div>
+        <div class="contact-container row" data-aos="fade-up">
+            <div class="details-container col-md-4 col-sm-12">
+                <div class="details">
+                    <ul class="fa-ul">
+                        <li><span class="fa-li"><i class="fa-solid fa-location-dot"></i></span>
+                            <h2>Location</h2>
+                            <p>Ibadan, Nigeria</p>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="details">
+                    <ul class="fa-ul">
+                        <li><span class="fa-li"><i class="fa-solid fa-envelope"></i></span>
+                            <h2>Email</h2>
+                            <p>techbros@gmail.com</p>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="details">
+                    <ul class="fa-ul">
+                        <li><span class="fa-li"><i class="fa-solid fa-phone-volume"></i></span>
+                            <h2>Phone</h2>
+                            <p>+2349052513365</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <form class="contact-input col-md-8 col-sm-12">
+                <div class="inputs row float-left flex">
+                    <input type="text" placeholder="Name" class="col-md-5 col-sm-12">
+
+                    <input type="email" placeholder="Email" class="col-md-5 col-sm-12">
+                    <input type="text" placeholder="Subject" class="col-sm-12">
+                    <textarea id="" cols="30" rows="6" class="col-sm-12" placeholder="Message"></textarea>
+                </div>
+                <button class="message">Send Message</button>
+            </form>
+        </div>
+    </section>
+    <section class="footer" data-aos="fade-up">
+        <div class="footer-content" data-aos="flip-up">
+            <div class="footer-logo">
+                <img src="resources/images/logo.png" alt="logo">
+
+                <div class="socials">
+                    <a href=""><i class="fa-brands fa-facebook"></i></a>
+                    <a href=""><i class="fa-brands fa-twitter"></i></a>
+                    <a href=""><i class="fa-brands fa-instagram"></i></a>
+                    <a href=""><i class="fa-solid fa-envelope"></i></a>
+                </div>
+            </div>
+            <div class="container-fluid">
+                <div class="footer-list">
+                    <ul>
+                        <h3>Useful Links</h3>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="">Privacy Policy</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-list">
+                    <ul>
+                        <h3>Our Services</h3>
+                        <li><a href="">Web Design</a></li>
+                        <li><a href="">Web Development</a></li>
+                        <li><a href="">Product Management</a></li>
+                        <li><a href="">Graphic Design</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-list">
+                    <ul>
+                        <h3>Contact Us</h3>
+                        <li>Ibadan Nigeria</li>
+                        <li><span class="contact-category">Phone:</span> +2349052513365</li>
+                        <li><span class="contact-category">Email:</span> techbros@gmail.com</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <p class="copyright">&copy; Copyright <b>TechBros</b></p>
+
+    </section>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+    <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
 </body>
 <script src="https://cdn.jsdelivr.net/npm/glitched-writer/lib/index.min.js"></script>
 <script type="module">
